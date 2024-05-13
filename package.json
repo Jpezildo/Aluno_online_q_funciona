@@ -1,24 +1,24 @@
 {
-  "name": "Aluno_online_q_funciona",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "repository": "https://github.com/Jpezildo/Aluno_online_q_funciona",
-  "author": "Jpezildo <163006817+Jpezildo@users.noreply.github.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev:server": "yarn ts-node-dev --respawn --ignore-watch node_modules scr/server.tsc" ,
-     "typeorn": "yarn ts-node-dev ./node_modules/typeorm/cli.sj"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "sqlite3": "^5.1.7",
-    "typeorm": "^0.3.20",
-    "typescript": "^5.4.5"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.12.10",
-    "ts-node-dev": "1.1.8"
+    "name": "Aluno_online_q_funciona",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "repository": "https://github.com/Jpezildo/Aluno_online_q_funciona",
+    "author": "Jpezildo <163006817+Jpezildo@users.noreply.github.com>",
+    "license": "MIT",
+    "scripts": {
+      "dev:server": "yarn ts-node-dev --respawn --ignore-watch node_modules scr/server.tsc" ,
+       "typeorn": "yarn ts-node-dev ./node_modules/typeorm/cli.sj"
+    },
+    "dependencies": {
+      "express": "^4.19.2",
+      "sqlite3": "^5.1.7",
+      "typeorm": "^0.3.20",
+      "typescript": "^5.4.5"
+    },
+    "devDependencies": {
+      "@types/express": "^4.17.21",
+      "@types/node": "^20.12.10",
+      "ts-node-dev": "1.1.8"
+    }
   }
-}
