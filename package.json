@@ -2,19 +2,23 @@
   "name": "aluno_online_q_funciona",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Jpezildo/Aluno_online_q_funciona",
+  "repository": "https://github.com/Jpezildo/aluno_online_q_funciona",
   "author": "Jpezildo <163006817+Jpezildo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
     "dev:server": "yarn ts-node-dev --respawn --ignore-watch node_modules scr/server.tsc",
-    "typeorn": "yarn ts-node-dev ./node_modules/typeorm/cli.sj"
+    "typeorm": "yarn ts-node-dev ./node_modules/typeorm/cli.sj",
+    "migration:create": "typeorm migration:create ./db/migration/Create_User_Table",
+    "migration:run": "typeorm -- migration:run -d ./db/data-source.ts",
+    "entity:create": "yarn typeorm entity:create ./db/entity/User"
   },
   "dependencies": {
     "express": "4.19.2",
     "pg": "^8.11.5",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "5.1.7",
-    "typeorm": "^0.3.20",
+    "ts-node": "^10.9.2",
+    "typeorm": "0.3.20",
     "typescript": "5.4.5"
   },
   "devDependencies": {
