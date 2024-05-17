@@ -1,2 +1,4 @@
 export { UserRepository } from './UsersRepository'
-export { usersRoutes} from './routes'
+export { UserController } from './UserController'
+
+export { usersRoutes } from './routes'

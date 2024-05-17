@@ -1,14 +1,12 @@
 import { Router } from 'express';
-import { AuthController } from './Domains/Auth';
+import { authRouter } from './Domains/Auth';
 import { usersRoutes } from './Domains/Users';
 
 const router = Router()
 
-const authController = new AuthController()
+router.use("/auth", authRouter)
 
-router.post("/auth", authController.handle)
-
-router.use("/users",usersRoutes)
+router.use("/users", usersRoutes)
 
 export default router
 

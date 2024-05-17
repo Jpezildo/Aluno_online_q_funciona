@@ -10,23 +10,25 @@
     "build": "yarn tsc",
     "postinstall": "yarn build",
     "typeorm": "typeorm-ts-node-commonjs",
-    "migration:create": "typeorm migration:create ./db/migration/Create_User_Collumn_Password",
+    "migration:create": "yarn typeorm migration:create ./db/migration/Create_Courses_Table",
     "migration:run": "yarn typeorm -- migration:run -d ./db/data-source.ts",
+    "migration:revert": "yarn typeorm -- migration:revert -d ./db/data-source.ts",
     "entity:create": "yarn typeorm entity:create ./db/entity/User"
   },
   "dependencies": {
-    "express": "4.19.2",
+    "bcryptjs": "^2.4.3",
     "dotenv": "16.4.5",
-    "pg": "^8.11.5",
-    "reflect-metadata": "^0.2.2",
-    "sqlite3": "5.1.7",
-    "ts-node": "^10.9.2",
+    "express": "4.19.2",
+    "jsonwebtoken": "9.0.2",
+    "pg": "8.11.5",
+    "reflect-metadata": "0.2.2",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0",
     "typeorm": "0.3.20",
     "typescript": "5.4.5"
   },
   "devDependencies": {
     "@types/express": "4.17.21",
-    "@types/node": "20.12.10",
-    "ts-node-dev": "1.1.8"
+    "@types/node": "20.12.10"
   }
 }

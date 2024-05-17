@@ -2,7 +2,7 @@ import { Request, Response } from "express"
 import { AuthService } from './Authservice'
 
 export class AuthController {
-  async handle(req: Request, res: Response) {
+  async login(req: Request, res: Response) {
     const { email, password } = req.body
 
     const authService = new AuthService()
